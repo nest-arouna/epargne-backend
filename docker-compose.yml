@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  nest-epargne-backend:
+    image: 'nest-epargne-backend:latest'
+    build:
+      context: .
+    container_name: nest-epargne-backend
+    ports:
+      - "7070:7070"
+
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://51.38.225.0:5432/nest_epargne
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=1994
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+
+
+
+
+
